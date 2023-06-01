@@ -5,26 +5,23 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: CarlosGomez Check
+    Checkstyle-Configuration: Carlos Gomez Checks
     Description: 
 Pruebas
 -->
 <module name="Checker">
+<module name="Header">
+<property name="header" value="// Copyright (C) 2020\n// All rights reserved"/>
+</module>
   <property name="severity" value="warning"/>
-  <module name="Header">
-<property name="header" value="// Copyright (C) 2020\n// All rights reserved"/>
-</module>
   <module name="TreeWalker">
-    <module name="Indentation"/>
     <module name="MissingJavadocMethod"/>
+    <module name="Indentation"/>
   </module>
-  <module name="Header">
-<property name="header" value="// Copyright (C) 2020\n// All rights reserved"/>
-</module>
-<module name="LocalVariableName">
+  <module name="LocalVariableName">
 <property name="format" value="^[a-z](_?[a-zA-Z0-9]+)*$" />
 </module>
-<module name="MissingJavadocMethod ">
+module name="MissingJavadocMethod ">
 <property name="scope" value="private"/>
 <property name="allowMissingPropertyJavadoc" value="true" />
 </module>
