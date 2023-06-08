@@ -1,12 +1,28 @@
-package taller1IS;
+package taller1is;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @return
+ */
 public class Vacations {
-    String destination;
-    int numTravelers;
-    int duration;
-    int base;
+	/**
+	 * 
+	 * @return
+	 */ 
+	/* default */ final String destination;
+ /**
+	 * 
+	 * @return
+	 */ 
+	/* default */ final int numTravelers;
+
+	/**
+	 * 
+	 * @return
+	 */ 
+	/* default */ final int duration;
+
 	/**
 	 * 
 	 * @return
@@ -19,20 +35,14 @@ public class Vacations {
 	 * 
 	 * @return
 	 */
-    public Vacations(String destination, int numTravelers, int duration){
+    public Vacations(final String destination, final int numTravelers, final int duration){
 	super();
 	this.destination = destination;
 	this.numTravelers = numTravelers;
 	this.duration = duration;
     }
     
-    /**
-   	 * 
-   	 * @return
-   	 */
-    public void setDestination(String destination){
-        this.destination = destination;
-    }
+ 
     /**
    	 * 
    	 * @return
@@ -40,14 +50,7 @@ public class Vacations {
     public int getNumTravelers() {
         return numTravelers;
     }
-	  /**
-   	 * 
-   	 * @return
-   	 */
 
-    public void setNumTravelers(int numTravelers) {
-        this.numTravelers = numTravelers;
-    }
     /**
    	 * 
    	 * @return
@@ -60,73 +63,59 @@ public class Vacations {
    	 * @return
    	 */
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-	 /**
-   	 * 
-   	 * @return
-   	 */
-    public int getBase() {
-        return base;
-    }
-	 /**
-   	 * 
-   	 * @return
-   	 */
-    public void setBase(int base) {
-        this.base = base;
-    }
-	 /**
-   	 * 
-   	 * @return
-   	 */
-
-    public static int calculate(Vacations vacacion) {
-
-        int base = 1000;
-
-        if (vacacion.getDestination().equals("Paris")) {
+    public static int calculate(final Vacations vacacion) {
+    	final  int maxvalue = 10;
+    	final  int maxvalue1 = 80;
+        final  int minvalues = 7;
+        final int base = 1000;
+        final String paris="Paris";
+        final String newCity="New York City";
+        if (vacacion.getDestination().equals(paris)) {
             return base + 500;
-
-        } else if (vacacion.getDestination().equals("New York City")) {
+        } else if (vacacion.getDestination().equals(newCity)) {
             return base + 600;
 
         } else if ((vacacion.getNumTravelers() >= 4) && (vacacion.getNumTravelers() < 10)) {
             return (int) (base * 0.10);
 
-        } else if (vacacion.getNumTravelers() > 10) {
+        } else if (vacacion.getNumTravelers() >maxvalue) {
             return (int) (base * 0.20);
 
-        } else if (vacacion.getDuration() < 7) {
+        } else if (vacacion.getDuration() < minvalues) {
             return base + 200;
 
         } else if (vacacion.getDuration() > 30 || vacacion.getNumTravelers() == 2) {
             return base - 200;
 
-        } else if (vacacion.getNumTravelers() > 80)
-            System.out.println("No est� disponible el servicio para tantas personas. ");
+        } else if (vacacion.getNumTravelers() > maxvalue1) {
+            System.out.println("No esta disponible el servicio para tantas personas. ");
+                
+            
+        }
         return -1;
     }
 
-	// CHECKSTYLE:OFF
-	public static void main(String[] args) {
+    /**
+    *
+    *
+    * @author C
+    */
+    public static void main(String[] args) {
 		// CHECKSTYLE:ON
-		// TODO Auto-generated method stub
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ingrese el n�mero de pasajeros: ");
-        int travelers = sc.nextInt();
-
+        final Scanner scaner = new Scanner(System.in);
+        System.out.println("Ingrese el numero de pasajeros: ");
+        final int travelers = scaner.nextInt();
         System.out.println("Ingrese el destino: ");
-        String destination = sc.next();
+        final String destination = scaner.next();
 
-        System.out.println("Ingrese la duraci�n del viaje: ");
-        int duration = sc.nextInt();
-
-        Vacations vacaciones = new Vacations(destination, travelers, duration);
-
+        System.out.println("Ingrese la duracion del viaje: ");
+        final int duration = scaner.nextInt();
+       
+        final Vacations vacaciones = new Vacations(destination, travelers, duration);
+        
         System.out.println("Valor a pagar " + calculate(vacaciones));
+        scaner.close();
     }
 
 }

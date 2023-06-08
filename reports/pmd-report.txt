@@ -1,0 +1,13 @@
+src/main/java/taller1is/Vacations.java:66:	CyclomaticComplexity:	CyclomaticComplexity: The method 'calculate(Vacations)' has a cyclomatic complexity of 10.
+src/main/java/taller1is/Vacations.java:74:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:76:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:79:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:82:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:85:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:88:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/taller1is/Vacations.java:91:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/main/java/taller1is/Vacations.java:106:	CloseResource:	CloseResource: Ensure that resources like this Scanner object are closed after use
+src/main/java/taller1is/Vacations.java:107:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/main/java/taller1is/Vacations.java:109:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/main/java/taller1is/Vacations.java:112:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/main/java/taller1is/Vacations.java:117:	SystemPrintln:	SystemPrintln: Usage of System.out/err
